@@ -1,0 +1,152 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style-main.css" />
+  </head>
+
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar-container relative container mx-auto p-6">
+      <div class="flex items-center justify-between">
+        <!-- brand logo -->
+        <div class="logo">
+          <!--manu icon-->
+          <img src="images/icon-menu.svg" id="menu-btn" alt="" />
+
+          <img src="images/logo.svg" alt="sneaker brand logo" />
+        </div>
+        <!-- nav items -->
+        <div id="nav-item" class="navbar-item hide-nav md:flex space-x-7">
+          <!--close icon-->
+          <img id="close-btn" src="images/icon-close.svg" alt="close icon" />
+
+          <a href="#" class="item">Collection</a>
+          <a href="#" class="item">Men</a>
+          <a href="#" class="item">Women</a>
+          <a href="#" class="item">About</a>
+          <a href="#" class="item">Contact</a>
+        </div>
+        <div class="icons flex item-center space-x-12">
+          <div class="icon">
+            <!-- cart icon -->
+            <img
+              class="cart-icon"
+              src="images/icon-cart.svg"
+              alt="cart icon "
+              onclick="showCart()"
+            />
+            <p class="item-number">3</p>
+          </div>
+          <div class="profile">
+            <!-- customer profile image -->
+            <img id="profile-image" src="images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- product page main container -->
+    <div class="main-container">
+      <!-- product image container -->
+      <div class="product-image-container">
+        <div class="mySlides">
+          <img class="slide" src="images/image-product-1.jpg" />
+        </div>
+
+        <div class="mySlides">
+          <img class="slide" src="images/image-product-2.jpg" />
+        </div>
+
+        <div class="mySlides">
+          <img class="slide" src="images/image-product-3.jpg" />
+        </div>
+
+        <div class="mySlides">
+          <img class="slide" src="images/image-product-4.jpg" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="thamnail-slide">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="images/image-product-1.jpg"
+              style="width: 100%"
+              onclick="currentSlide(1)"
+              alt="The Woods"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="images/image-product-2.jpg"
+              style="width: 100%"
+              onclick="currentSlide(2)"
+              alt="Cinque Terre"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="images/image-product-3.jpg"
+              style="width: 100%"
+              onclick="currentSlide(3)"
+              alt="Mountains and fjords"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="images/image-product-4.jpg"
+              style="width: 100%"
+              onclick="currentSlide(4)"
+              alt="Northern Lights"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- product text container -->
+      <div class="product-text-container">
+        <h5 class="sneaker-name">SNEAKER FALL 00V EDITION</h5>
+        <h1 class="sneaker-title">Fall Limited Edition Sneakers</h1>
+        <p class="sneaker-information">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <h3 class="price">$125.00 <span class="price-off">50%</span></h3>
+        <h4 class="main-price"><s>$250.00</s></h4>
+        <div class="button-container">
+          <!-- item add buttons -->
+          <div class="add-item-button">
+            <button onclick="subtractNum()" class="subtract-btn">-</button>
+            <p class="number-of-item">0</p>
+            <button onclick="addNum()" class="addition-btn">+</button>
+          </div>
+          <!-- add item in cart button -->
+          <div class="add-to-cart-button">
+            <button onclick="itemAdd()" class="cart-text">
+              <i class="bi bi-cart3"></i>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--cart item show-->
+      <div class="main-cart hide-cart shadow-xl p-3">
+        <h3 class="cart p-4">Cart</h3>
+        <!--product add show code-->
+        <div class="item-cart"></div>
+        <!--checkout button-->
+        <button class="Checkout-btn">Checkout</button>
+      </div>
+    </div>
+  <!--javascript main script link-->
+    <script src="js/ecommerse-main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,458 @@
+/* google font import link */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+
+:root{
+  --action-color:#f57c34;
+  --second-font-color:rgb(138, 138, 138);
+  --primary-font-color:#1f1f1f;
+  --background-color:#fcfafa;
+  /* font size */
+  --secondary-font-size:clamp(0.7em,1.1vw,1.2rem);
+  --primary-font-size:clamp(1.5em,3vw,3.5rem);
+  --border-radius: 0.6em;
+  --secondary-font:'Open Sans', sans-serif;
+  --primary-font: 'Hind Siliguri', sans-serif;
+
+  
+}
+
+body{
+  font-family: var(--secondary-font);
+  background-color: var(--background-color);
+}
+/* navbar style */
+.navbar-container{
+  /* display: flex;
+  flex-direction: row; */
+  border-bottom: 1px solid rgb(212, 212, 212);
+  margin-bottom: 2rem;
+  
+}
+/* navbar text style */
+.item{
+  
+  font-weight: normal;
+  font-size: var(--secondary-font-size);
+  color: var(--second-font-color);
+  letter-spacing: .12rem;
+  transition: all 400ms 10ms;
+}
+.item:hover{
+  color: rgb(62, 62, 62);
+}
+
+.profile{
+  width: 50px;
+  height: 50px;
+
+}
+#profile-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+}
+#profile-image:hover{
+  border: 2px solid var(--action-color);
+}
+#profile-image:active{
+  border: 4px solid var(--action-color);
+}
+.cart-icon{
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+
+.item-number{
+  background-color: var(--action-color);
+  color: white;
+  font-size: clamp(0.5em,0.8vw,1rem);
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  top: -28px;
+  right: -9px;
+ 
+} 
+
+#menu-btn{
+  display: block;
+  margin-right: 3vw;
+}
+#close-btn{
+  display: none;
+}
+
+   /*navbar i pad screen style use media Queary */
+   @media(min-width:765px){
+    #menu-btn{
+      display: none;
+    
+    }
+   }
+
+ @media (max-width:765px) {
+
+  .logo{
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar-item{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -60px;
+  top: 0px;
+  background-color: white;
+  text-align: left;
+  width: 70%;
+  height: 100vh;
+  box-shadow: 3px 0px 59px -12px #aaa;
+  z-index: 3;
+
+  }
+  /* hide nav class create for hide and show navbar*/
+  .hide-nav{
+    display: none;
+    transition: all 600ms 10ms;
+  }
+  .item{
+    padding: 1.5rem 3.3rem;
+    font-size: clamp(1em,2vw,3rem);;
+    font-weight: bolder;
+    color: var(--primary-font-color);
+  }
+  .item:hover{
+    color: black;
+    transform: scale(1.05, 1.1);
+  }
+  
+  #close-btn{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 5.3rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+ }  
+
+/* product page main container style */
+.main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3rem auto;
+  width: 80%;
+}
+/*mobile design*/
+@media(max-width:650px){
+  .main-container{
+    flex-direction: column;
+    width: 96%;
+    margin: 2rem auto;
+
+  }
+  .product-image-container{
+    width: 100%;
+  }
+  .sneaker-title{
+    margin-bottom: 2vh;
+  }
+  .product-text-container{
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 1em auto;
+
+  }
+  .add-item-button,.add-to-cart-button{
+    width: 80%;
+    margin: 0.5em auto;
+    height: 5vh;
+
+  }
+  .thamnail-slide{
+    display: none;
+  }
+  .prev,.next{
+    position: absolute;
+    top: 33vh;
+    padding: 0.1rem 0.7rem;
+    background-color: white;
+    color: black;
+    font-size: clamp(1.7em,3.7vw,4rem);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+
+  }
+  .prev{
+    left: 4vw;
+  }
+  .next{
+  
+    right: 4vw;
+   
+
+  }
+}
+
+@media(min-width:651px){
+  .thamnail-slide{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem auto;
+    justify-content: space-between;
+  }
+  /* product image containe */
+.product-image-container{
+  width:45%;
+
+}
+/* product text container */
+.product-text-container{
+  width: 40%;
+  margin: auto 0;
+}
+  /*product add button*/
+  .button-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em auto;
+  }
+  .add-item-button{
+    width: 30%;
+   
+  }
+  .add-to-cart-button{
+    width: 50%;
+    
+
+  }
+  .prev,.next{
+    display: none;
+  }
+}
+ 
+/* main product image slides style */
+.slide{
+ width: 100%;
+ border: 1px solid transparent;
+ border-radius: var(--border-radius);
+}
+
+/* thumnail slides image */
+
+.column{
+  width: 19%;
+}
+
+
+.sneaker-name{
+  color: var(--action-color);
+  font-size: clamp(0.9em,1.2vw,1.3rem);
+  font-weight: bold;
+  margin: 1em auto;
+}
+.sneaker-title{
+  font-family: var(--primary-font);
+  font-size: clamp(2em,3.7vw,3.9rem);
+  color: var(--primary-font-color);
+  font-weight: bolder;
+  line-height:clamp(1.25em, 3.5vw, 3.2rem);
+  letter-spacing: .11rem;
+  margin-bottom: 4vh;
+
+}
+.sneaker-information{
+  color: var(--second-font-color);
+  font-size: var(--secondary-font-size);
+  letter-spacing: .08rem;
+  margin-bottom: 2vh;
+}
+.price{
+  font-size: clamp(1.1em,2.3vw,2.4rem);
+  color: var(--primary-font-color);
+  font-weight: bold;
+}
+.price-off{
+  background-color: #fee8db;
+  color: var(--action-color);
+  font-size:clamp(0.6em,0.9vw,1rem);
+  padding: .2rem .4rem;
+  border-radius: 0.4rem;
+  margin-left: 1vw;
+  
+}
+.main-price{
+  color: var(--second-font-color);
+  font-size: var(--secondary-font-size);
+  font-weight: bold;
+  margin-top: 0.5vh;
+
+}
+
+  .add-item-button{
+    display: flex;
+  
+    background-color: rgb(245, 242, 238);
+    /* width: 30%; */
+    border-radius: var(--border-radius);
+    justify-content: space-between;
+    padding: 0 .7rem;
+  }
+  .subtract-btn,.addition-btn{
+   color: var(--action-color);
+   font-size:clamp(1em,1.5vw,1.9rem);
+  }
+  .number-of-item{
+    margin: auto 0;
+    font-size: var(--secondary-font-size);
+    color: var(--primary-font-color);
+    font-family: var(--primary-font);
+  }
+  /*add to cart button*/
+  .add-to-cart-button{
+    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    background-color: var(--action-color);
+    font-size: var(--secondary-font-size);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: .5em 0;
+  }
+  .cart-text{
+    margin: 0 auto;
+  }
+  .bi{
+    margin-right: 1vw;
+  }
+
+/* slide product showup part */
+.numbertext {
+    color: #210a0a;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 1;
+    border-radius: 0.5em;
+    border: 1px solid transparent;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 0.4;
+    border: 2px solid rgb(217, 106, 1);
+  }
+
+  /* product add show cart */
+  .main-cart{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    /* height: 400px; */
+    background-color: white;
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: 83px;
+    right: 35px;
+    
+  }
+
+  /*main cart mobile design*/
+  @media(max-width:450px){
+    .main-cart{
+      width: 90vw;
+      right: 16px;
+      z-index: 5;
+      
+    }
+  }
+  /* cart hide class*/
+  .hide-cart{
+    display: none;
+    transition: all 500ms 10ms;
+
+  }
+  .cart{
+    font-size: var(--secondary-font-size);
+    color: var(--primary-font-color);
+    font-weight: bold;
+    border-bottom: 1px solid rgb(194, 192, 192);
+  }
+  .cart-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 98%;
+  margin: 0.7rem auto;
+  padding: 0 0.4rem;
+
+
+  }
+
+  .item-image{
+    height: 55px;
+    width: 18%;
+    
+  }
+  .item-info{
+    width: 68%;
+  }
+  .item-name,.item-quantity{
+    color: var(--second-font-color);
+    font-size: var(--secondary-font-size);
+
+  }
+  .total-price{
+    font-weight: bolder;
+    color: var(--primary-font-color);
+    font-size: 0.9rem;
+  }
+  .item-delete{
+    width: 8%;
+    margin: auto 0;
+    cursor: pointer;
+  }
+  .checkout-btn{
+    background-color: var(--action-color);
+    color: white;
+    font-size: var(--secondary-font-size);
+    border-radius: var(--border-radius);
+    width: 87%;
+    margin: 0.3rem auto;
+    height: 4vh;
+    cursor: pointer;
+  }
+
+  @media (max-width:340px){
+    .icon{
+    margin-left: 0.5rem;
+    }
+  }
