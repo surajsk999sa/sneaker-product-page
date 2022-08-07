@@ -1,5 +1,3 @@
-# Frontend Mentor - Space tourism website solution
-
 
 ## Overview
 This is fake sneaker company product page design.
