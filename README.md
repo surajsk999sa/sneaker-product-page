@@ -10,7 +10,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: ( https://surajsk999sa.github.io/job-porter/)
+- Live Site URL: (  https://surajsk999sa.github.io/sneaker-product-page/)
 
 ### Built with
 
